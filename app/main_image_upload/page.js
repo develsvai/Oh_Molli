@@ -140,7 +140,7 @@ export default function image_upload(){
             if( result === "success") {
                 console.log("메인 이미지 업로드 성공")
 
-                for( let i =0; i<upload_detail.length; i++){
+                for( let i =0; i< upload_detail.length; i++){
 
                     const aws_result =  await aws_Detail_image(p_num, upload_detail[i].File)
                     const ok = await aws_result.ok
