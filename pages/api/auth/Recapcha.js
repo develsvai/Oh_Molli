@@ -6,8 +6,8 @@ const { jwtVerify, SignJWT} = require('jose');
 export default async function handler(요청,응답) {
 //   console.log(요청.body)
   const recaptchaValue  = 요청.body;
-  const secretKey = '6LfmkOsmAAAAAAGYz7fPBVDyTgF-qxNcvoRByUuk';
-  const verificationUrl = `https://www.google.com/recaptcha/api/siteverify`;
+  const secretKey = process.env.CAPCHA_KEY 
+  const verificationUrl = process.env.CAPCHA_URL
 
   try {
     axios.post("",{data},{
