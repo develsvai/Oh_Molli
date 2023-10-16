@@ -72,6 +72,7 @@ export const authOptions = {
 
       async jwt({ token, user ,account}) {
         
+        
         if (user) {
           
           const payload = { userId: user.email };

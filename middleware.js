@@ -38,6 +38,7 @@ export async function middleware(request , response) {
         }
         
         const server_session = await getToken({req : request})
+
         const hash = cookie_session?.session_info?.deactivate ? await bcrypt.compare("your session is deactivate", cookie_session.session_info.deactivate.split('$').slice(0).join('$')) : false;
 
                     if(cookie_session) {

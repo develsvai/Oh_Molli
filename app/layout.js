@@ -12,18 +12,19 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en">
+      
         <body>
-
-          <header className='haeder'>
-            <BasicExample/>
-          </header>
+          <ReduxProvider>
+            <header className='haeder'>
+              <BasicExample/>
+            </header>
   
-
-            <ReduxProvider>{children}</ReduxProvider>
-
-
-            <Footer/>
+              {children}
+              <Footer/>
+            </ReduxProvider>
         </body>
+      
+  
 
         
     </html>

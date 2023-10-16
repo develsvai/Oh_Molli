@@ -40,7 +40,6 @@ export default function image_upload(){
 
                 if (업로드결과.ok) {
 
-                
                     const response = await fetch( '/api/product/main_image_upload', {
                         method : 'POST',
                         body : JSON.stringify({
@@ -59,6 +58,7 @@ export default function image_upload(){
 
                         return "failure"
                     }
+
                     
                 } else {
                     console.log('실패')
@@ -72,7 +72,10 @@ export default function image_upload(){
 
                 let file = image
                 let filename = encodeURIComponent(file.name)
-                let res = await fetch('/api/product/detail_presigned_url?file=' + filename, {method : "POST", body : JSON.stringify({ pnum : p_num}) } )
+                let res = await fetch('/api/product/detail_presigned_url?file=' + filename, { 
+                    method : "POST", 
+                    body : JSON.stringify({ pnum : p_num }) 
+                } )
                 res = await res.json()
                 console.log (res)
 

@@ -27,6 +27,7 @@ export default function detail(Pro_ID) {
         }else{
             fetchData();
         }
+        
 
     },[]);
 

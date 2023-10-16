@@ -27,14 +27,6 @@ function home() {
 
   },[])
 
-  // const detailhandler =(e,Pro_Id) => {
-
-  //   console.log(e ,':', data)
-
-
-  // }
-
-
   const fetchData = async() => {
 
       const response = await fetch('/api/product/main_image_get');

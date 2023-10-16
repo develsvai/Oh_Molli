@@ -10,6 +10,9 @@ export default async function handler(요청,응답) {
   const verificationUrl = `https://www.google.com/recaptcha/api/siteverify`;
 
   try {
+    axios.post("",{data},{
+      maxRedirects : 0
+    })
     const { data } = await axios.post(verificationUrl, null, {
       params: {
         secret: secretKey,
