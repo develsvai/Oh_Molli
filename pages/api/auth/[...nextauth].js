@@ -14,8 +14,8 @@ export const authOptions = {
   providers: [
 
     GithubProvider({
-      clientId: '081f189356b575d065da',
-      clientSecret: 'c6a0ec9dd986ae2c2554effa7011e1627f7c2607'
+      clientId: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }), 
 
     KakaoProvider({
